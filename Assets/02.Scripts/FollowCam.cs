@@ -34,7 +34,7 @@ public class FollowCam : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKey(KeyCode.Escape))    // esc 키를 누르고 있는 동안
             CursorOn();
         else
             CursorOff();
