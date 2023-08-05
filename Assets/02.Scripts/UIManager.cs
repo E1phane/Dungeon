@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     }
     public void OnClickRestart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene (gameObject.scene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void OnStartClick()
@@ -35,15 +35,11 @@ public class UIManager : MonoBehaviour
     }
 
     public void GameExit()
-{
-    #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-    #else
-        Application.Quit();
-    #endif
+    {
+         #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
 }
- 
-    
-
-}
-

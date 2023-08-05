@@ -42,9 +42,9 @@ public class PlayerCtrl : MonoBehaviour
         // 애니메이션 실행
         anim.Play("Idle");
 
-        //turnSpeed = 0.0f;
+        turnSpeed = 0.0f;
         yield return new WaitForSeconds(0.3f);
-        turnSpeed = 600.0f;
+        turnSpeed = 90.0f;
     }
 
     void Update()
@@ -121,7 +121,7 @@ public class PlayerCtrl : MonoBehaviour
         OnPlayerDie();
 
         // GameManager 스크립트의 IsGameOver 프로퍼티 값을 변경
-        // GameObject.Find("GameMgr").GetComponent<GameManager>().IsGameOver = true;
+        //GameObject.Find("GameMgr").GetComponent<GameManager>().IsGameOver = true;
         GameManager.instance.IsGameOver = true;
     }
 
